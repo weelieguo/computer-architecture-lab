@@ -1,0 +1,148 @@
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 1
+Design : riscv_core_timing
+Version: J-2014.09-SP4
+Date   : Mon Apr 24 19:14:36 2023
+****************************************
+
+ # A fanout number of 1000 was used for high fanout net computations.
+
+Operating Conditions: typical   Library: typical
+Wire Load Model Mode: top
+
+  Startpoint: RISCV_Core/Ctrl_Register_M_WAY_0/Q_reg[19]
+              (rising edge-triggered flip-flop clocked by clk)
+  Endpoint: RISCV_Core/PC_Register_F_WAY_0/Q_reg[20]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  RISCV_Core/Ctrl_Register_M_WAY_0/Q_reg[19]/CK (DFFRHQX4)
+                                                          0.00 #     0.00 r
+  RISCV_Core/Ctrl_Register_M_WAY_0/Q_reg[19]/Q (DFFRHQX4)
+                                                          0.14       0.14 f
+  RISCV_Core/Ctrl_Register_M_WAY_0/Q[19] (register_WIDTH24_5)
+                                                          0.00       0.14 f
+  RISCV_Core/FORWARD_DATA/ctrl_signals_M_WAY_0[memRead] (forward)
+                                                          0.00       0.14 f
+  RISCV_Core/FORWARD_DATA/U200/Y (INVX4)                  0.07       0.21 r
+  RISCV_Core/FORWARD_DATA/U121/Y (NAND2X4)                0.03       0.24 f
+  RISCV_Core/FORWARD_DATA/U147/Y (OAI2BB1X4)              0.07       0.31 r
+  RISCV_Core/FORWARD_DATA/U305/Y (NOR2X2)                 0.05       0.36 f
+  RISCV_Core/FORWARD_DATA/U298/Y (CLKINVX4)               0.05       0.42 r
+  RISCV_Core/FORWARD_DATA/U234/Y (INVX4)                  0.03       0.44 f
+  RISCV_Core/FORWARD_DATA/U605/Y (AOI222X1)               0.27       0.72 r
+  RISCV_Core/FORWARD_DATA/U600/Y (NAND3X2)                0.07       0.78 f
+  RISCV_Core/FORWARD_DATA/rs2_data_final_E_WAY_1[9] (forward)
+                                                          0.00       0.78 f
+  RISCV_Core/ALU_Src2_Mux_WAY_1/in[1][9] (mux_INPUTS2_WIDTH32_1)
+                                                          0.00       0.78 f
+  RISCV_Core/ALU_Src2_Mux_WAY_1/U63/Y (AOI22X4)           0.15       0.93 r
+  RISCV_Core/ALU_Src2_Mux_WAY_1/U6/Y (INVX8)              0.03       0.96 f
+  RISCV_Core/ALU_Src2_Mux_WAY_1/out[9] (mux_INPUTS2_WIDTH32_1)
+                                                          0.00       0.96 f
+  RISCV_Core/ALU_WAY_1/alu_src2[9] (riscv_alu_1)          0.00       0.96 f
+  RISCV_Core/ALU_WAY_1/U506/Y (INVX4)                     0.04       1.00 r
+  RISCV_Core/ALU_WAY_1/U504/Y (NAND2X4)                   0.03       1.03 f
+  RISCV_Core/ALU_WAY_1/U505/Y (NAND2X4)                   0.05       1.08 r
+  RISCV_Core/ALU_WAY_1/ALU_Adder/B[9] (adder_WIDTH32_1)
+                                                          0.00       1.08 r
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/B[9] (adder_WIDTH32_1_DW01_add_0)
+                                                          0.00       1.08 r
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U67/Y (NOR2X2)
+                                                          0.03       1.11 f
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U64/Y (OAI21X1)
+                                                          0.11       1.21 r
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U62/Y (AOI21X1)
+                                                          0.06       1.27 f
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U61/Y (OAI21X1)
+                                                          0.13       1.39 r
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U59/Y (INVX2)
+                                                          0.03       1.42 f
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U57/Y (OAI21X2)
+                                                          0.06       1.48 r
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U58/Y (AOI22X2)
+                                                          0.07       1.55 f
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U105/Y (NAND3X2)
+                                                          0.08       1.63 r
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U120/Y (NAND2X2)
+                                                          0.04       1.67 f
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U109/Y (OAI211X2)
+                                                          0.07       1.73 r
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U110/Y (NAND2X2)
+                                                          0.04       1.77 f
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U135/Y (NAND4BX4)
+                                                          0.12       1.89 f
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U104/Y (OAI211X2)
+                                                          0.07       1.96 r
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U101/Y (NAND2X2)
+                                                          0.04       2.00 f
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U53/Y (OAI2BB1X4)
+                                                          0.09       2.09 r
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U39/Y (AOI21X2)
+                                                          0.05       2.14 f
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U40/Y (AOI2BB1X4)
+                                                          0.14       2.28 f
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U166/Y (NAND2X2)
+                                                          0.05       2.33 r
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/U278/Y (NAND2X2)
+                                                          0.04       2.37 f
+  RISCV_Core/ALU_WAY_1/ALU_Adder/add_1_root_add_430_2/SUM[27] (adder_WIDTH32_1_DW01_add_0)
+                                                          0.00       2.37 f
+  RISCV_Core/ALU_WAY_1/ALU_Adder/sum[27] (adder_WIDTH32_1)
+                                                          0.00       2.37 f
+  RISCV_Core/ALU_WAY_1/U426/Y (AOI2BB2X2)                 0.09       2.46 r
+  RISCV_Core/ALU_WAY_1/U361/Y (NAND3X2)                   0.05       2.50 f
+  RISCV_Core/ALU_WAY_1/alu_out[27] (riscv_alu_1)          0.00       2.50 f
+  RISCV_Core/U150/Y (CLKINVX1)                            0.07       2.58 r
+  RISCV_Core/U161/Y (CLKINVX3)                            0.06       2.63 f
+  RISCV_Core/BRANCH_B/alu_out_E_WAY_1[27] (branchP)       0.00       2.63 f
+  RISCV_Core/BRANCH_B/ne_1008_2/B[27] (branchP_DW01_cmp6_1)
+                                                          0.00       2.63 f
+  RISCV_Core/BRANCH_B/ne_1008_2/U2/Y (XOR2X4)             0.13       2.77 r
+  RISCV_Core/BRANCH_B/ne_1008_2/U9/Y (NAND4X2)            0.05       2.82 f
+  RISCV_Core/BRANCH_B/ne_1008_2/U14/Y (NOR4X2)            0.16       2.97 r
+  RISCV_Core/BRANCH_B/ne_1008_2/U11/Y (AND2X4)            0.10       3.07 r
+  RISCV_Core/BRANCH_B/ne_1008_2/U7/Y (NAND2X4)            0.03       3.10 f
+  RISCV_Core/BRANCH_B/ne_1008_2/NE (branchP_DW01_cmp6_1)
+                                                          0.00       3.10 f
+  RISCV_Core/BRANCH_B/U54/Y (CLKINVX4)                    0.03       3.13 r
+  RISCV_Core/BRANCH_B/U53/Y (NAND3X2)                     0.04       3.17 f
+  RISCV_Core/BRANCH_B/U79/Y (NAND3X1)                     0.12       3.29 r
+  RISCV_Core/BRANCH_B/U175/Y (INVX4)                      0.10       3.39 f
+  RISCV_Core/BRANCH_B/U198/Y (AOI222XL)                   0.27       3.66 r
+  RISCV_Core/BRANCH_B/U189/Y (NAND2XL)                    0.03       3.70 f
+  RISCV_Core/BRANCH_B/next_pc_E_WAY_0[20] (branchP)       0.00       3.70 f
+  RISCV_Core/nextPC_Mod/next_pc_E_WAY_0[20] (nextPCmod)
+                                                          0.00       3.70 f
+  RISCV_Core/nextPC_Mod/U74/Y (OAI2BB2XL)                 0.12       3.81 f
+  RISCV_Core/nextPC_Mod/next_pc_WAY_0[20] (nextPCmod)     0.00       3.81 f
+  RISCV_Core/PC_Register_F_WAY_0/D[20] (register_32_00400000)
+                                                          0.00       3.81 f
+  RISCV_Core/PC_Register_F_WAY_0/U63/Y (OAI2BB2XL)        0.12       3.93 f
+  RISCV_Core/PC_Register_F_WAY_0/Q_reg[20]/D (DFFRHQXL)
+                                                          0.00       3.93 f
+  data arrival time                                                  3.93
+
+  clock clk (rise edge)                                   4.10       4.10
+  clock network delay (ideal)                             0.00       4.10
+  RISCV_Core/PC_Register_F_WAY_0/Q_reg[20]/CK (DFFRHQXL)
+                                                          0.00       4.10 r
+  library setup time                                     -0.17       3.93
+  data required time                                                 3.93
+  --------------------------------------------------------------------------
+  data required time                                                 3.93
+  data arrival time                                                 -3.93
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+1
